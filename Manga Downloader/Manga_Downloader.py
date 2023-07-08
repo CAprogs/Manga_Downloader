@@ -9,7 +9,7 @@ from PIL import Image
 #================================================================== Les variables de départ ===========================================================================
 page = 1 # Page de départ
 chapter = 1 # Chapitre 
-nom_fichier='Chap1' # Nom du fichier
+nom_fichier='/Users/charles-albert/Desktop/Manga Downloader/Chap1' # Chemin + Nom du fichier à créer
 lien_chapitre=str(f'https://www.japscan.lol/lecture-en-ligne/jujutsu-kaisen/{chapter}/{page}.html')
 nombre_pages= 51
 #======================================================================================================================================================================
@@ -27,7 +27,7 @@ driver = webdriver.Chrome(options=options,executable_path='/Users/charles-albert
 driver.maximize_window() # Ouvrir le navigateur en full size
 # -----------------------------------------------------------
 
-# Accès à la page en question avec Selenium
+# Accès à la page avec Selenium
 driver.get(lien_chapitre)
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 
@@ -45,12 +45,18 @@ def crop(path_image,size):
     screen_height = image.height # Hauteur screenshot
 
     # Calculer les coordonnées de recadrage
-    x = 0,9*(screen_width - initial_width) // 2
-    y = 0*9(screen_height - initial_height) // 2
-
-    # Recadrer l'image pour ne conserver que l'élément souhaité
-    image = image.crop((x, y, x + initial_width, y + initial_height))
-
+    x = (screen_width - initial_width) // 2
+    y = (screen_height - initial_height) // 2
+    a = 32 # Nbre de pixels à ajuster pour la bonne taille
+    
+    if initial_width > initial_height: # Si l'image est en mode paysage
+        # Recadrer l'image en ajustant pour conserver la largeur initiale
+        x = x // 2
+        image = image.crop((x,0,screen_width - x,screen_height))
+    else:
+        # Recadrer l'image pour ne conserver que l'élément souhaité
+        image = image.crop((x-a, y-a, x + initial_width+a, y + initial_height+a))
+    
     # Enregistrer l'image recadrée
     image.save(path_image)
 
@@ -65,7 +71,7 @@ while page <= nombre_pages:
 
     # Trouver l'élément souhaité sur la page à partir de l'URL de l'image
     element = driver.find_element_by_xpath('//*[@id="single-reader"]/img')
-    size = element.size #size[0]= height et . width
+    size = element.size
 
     driver.get(image_url)
 
@@ -87,9 +93,9 @@ while page <= nombre_pages:
     else:
         lien_chapitre=str(f'https://www.japscan.lol/lecture-en-ligne/jujutsu-kaisen/{chapter}/{page}.html')
         driver.get(lien_chapitre)
+        soup = BeautifulSoup(driver.page_source, 'html.parser')  # Analyse de la nouvelle page
     
 # Fermeture du navigateur
 driver.quit()
 
 print(f"\nTéléchargement du Chapitre {chapter} terminé.")
-
