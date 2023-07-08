@@ -8,7 +8,7 @@ from PIL import Image
 #======================================================================================================================================================================
 #================================================================== Les variables de départ ===========================================================================
 page = 1 # Page de départ
-chapter = 1 # Chapitre 
+chapter = 2 # Chapitre 
 nom_fichier='/Users/charles-albert/Desktop/Manga Downloader/Chap1' # Chemin + Nom du fichier à créer
 lien_chapitre=str(f'https://www.japscan.lol/lecture-en-ligne/jujutsu-kaisen/{chapter}/{page}.html')
 nombre_pages= 51
@@ -47,11 +47,12 @@ def crop(path_image,size):
     # Calculer les coordonnées de recadrage
     x = (screen_width - initial_width) // 2
     y = (screen_height - initial_height) // 2
-    a = 39 # Nbre de pixels à ajuster pour la bonne taille
+    a = 25 # Nbre de pixels à ajuster pour la bonne taille
+    b = 80 # Nbre de pixels à ajuster pour la bonne taille
     
     if initial_width > initial_height: # Si l'image est en mode paysage
         # Recadrer l'image en ajustant pour conserver la largeur initiale
-        x = ( x // 2 ) + 2*a
+        x = ( x // 2 ) + b
         image = image.crop((x,0,screen_width - x,screen_height))
     else:
         # Recadrer l'image pour ne conserver que l'élément souhaité
