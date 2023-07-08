@@ -47,11 +47,11 @@ def crop(path_image,size):
     # Calculer les coordonnées de recadrage
     x = (screen_width - initial_width) // 2
     y = (screen_height - initial_height) // 2
-    a = 32 # Nbre de pixels à ajuster pour la bonne taille
+    a = 39 # Nbre de pixels à ajuster pour la bonne taille
     
     if initial_width > initial_height: # Si l'image est en mode paysage
         # Recadrer l'image en ajustant pour conserver la largeur initiale
-        x = x // 2
+        x = ( x // 2 ) + 2*a
         image = image.crop((x,0,screen_width - x,screen_height))
     else:
         # Recadrer l'image pour ne conserver que l'élément souhaité
