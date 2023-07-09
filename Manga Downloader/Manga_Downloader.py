@@ -2,6 +2,7 @@ import os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from PIL import Image
+import re
 
 # Update du script :  Demande des informations à l'utilisateur 
 
@@ -11,7 +12,7 @@ page = 1 # Page de départ
 chapter = 1 # Chapitre 
 nom_fichier='/Users/charles-albert/Desktop/Manga Downloader/Chap1' # Chemin + Nom du fichier à créer
 lien_chapitre=str(f'https://www.japscan.lol/lecture-en-ligne/jujutsu-kaisen/{chapter}/{page}.html')
-nombre_pages= 51
+# Scraper les noms de mangas disponibles 
 #======================================================================================================================================================================
 
 # Création du répertoire pour enregistrer les images
@@ -31,6 +32,26 @@ driver.maximize_window() # Ouvrir le navigateur en full size
 driver.get(lien_chapitre)
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 
+# récupérer le nombre de pages du chapitre
+try:
+    element = driver.find_element_by_xpath('/html/body/div[7]/div[1]/div[2]/div/p[6]') # chemin vers l'élément qui contient le nombre de pages
+    element_nombre_pages = element.text.strip() # conversion en string
+
+    resultat = re.search(r'\d+', element_nombre_pages) # Utiliser une expression régulière pour extraire le chiffre
+    if resultat: # Si on trouve le nombre de pages, on le récupère
+        nombre_pages = int(resultat.group(0))
+        print(f"""\n Informations de téléchargement :
+              
+              Manga name : jujutsu-kaisen
+              Départ : Page {page}
+              Chapitre {chapter}
+              Nombre de pages : {nombre_pages}""")
+    else:
+        print("Aucun chiffre trouvé.")
+except:
+    print("Pas d'informations trouvées.")
+
+# Fonction pour crop l'image
 def crop(path_image,size):
 
     # Récupérer l'image capturée
@@ -61,7 +82,7 @@ def crop(path_image,size):
     # Enregistrer l'image recadrée
     image.save(path_image)
 
-# Rechercher l'image => Faire un screenshot => Redimensionner l'image => la télécharger
+# Rechercher l'image => Faire un screenshot => Redimensionner l'image => la sauvegarder
 while page <= nombre_pages:
 
     # Obtention de la balise contenant l'URL de l'image
