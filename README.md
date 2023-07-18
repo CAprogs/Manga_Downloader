@@ -1,5 +1,9 @@
-# Manga_Downloader
-Script Python qui permet de télécharger : toutes les pages -> d'un chapitre de manga -> du site 'www.japscan.lol'
+# Manga Downloader Scripts
+
+## Manga Downloader
+Scripts Python qui permettent de télécharger : 
+
+toutes les pages -> d'un chapitre de manga -> du site 'www.japscan.lol'
 
 Le script exige de préciser : 
 - le chapitre ,
