@@ -2,7 +2,7 @@
 
 ## Manga Downloader V2
 
-_Ancien_ Script Python qui *permettait* de télécharger : toutes les pages -> d'un chapitre de manga -> du site 'www.japscan.lol'
+**Ancien** Script Python qui **permettait** de télécharger : toutes les pages -> d'un chapitre de manga -> du site 'www.japscan.lol'
 
 Le script exige de préciser :
 - le nom du manga (figurant sur le site www.japscan.lol),
