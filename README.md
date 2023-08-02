@@ -17,6 +17,6 @@ Le fichier 'Manga_Downloader V2.py' est utilisé pour télécharger un chapitre 
 Le script exige de préciser :
 - l'url du manga à télécharger doit être sous la forme 'https://scantrad-vf.co/manga/jujutsu-kaisen/chapitre-1/?style=list'
 
-'?style=list' permet d'afficher toutes les pages du manga sur une seule page web.
+**'?style=list'** permet d'afficher toutes les pages du manga sur une seule page web.
 
 Le fichier 'Manga_Downloader_Update.py' est utilisé pour télécharger toutes les pages du premier chapitre du manga 'jujutsu kaisen'.
