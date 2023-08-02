@@ -21,7 +21,7 @@ Le script exige de préciser :
 
 Le fichier 'Manga_Downloader V2.py' était utilisé pour télécharger un chapitre du manga 'jujutsu kaisen'.
 
-## Manga Downloader Update
+## Manga Downloader V3
 
 **Nouveau** script Python qui permet de télécharger : toutes les pages -> d'un chapitre de manga -> du site 'https://scantrad-vf.co/'
 
@@ -32,4 +32,4 @@ Le script exige de préciser :
   
 **'?style=list'** permet d'afficher toutes les pages du manga sur une seule page web.
 
-Le fichier 'Manga_Downloader_Update.py' est utilisé pour télécharger toutes les pages du premier chapitre du manga 'jujutsu kaisen'.
+Le fichier 'Manga_Downloader V3.py' est utilisé pour télécharger toutes les pages du premier chapitre du manga 'jujutsu kaisen'.
