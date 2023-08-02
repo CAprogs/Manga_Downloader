@@ -2,7 +2,7 @@
 
 ## Manga Downloader V2
 
-*Ancien* Script Python qui *permettait* de télécharger : toutes les pages -> d'un chapitre de manga -> du site '[www.japscan.lol]'
+_Ancien_ Script Python qui *permettait* de télécharger : toutes les pages -> d'un chapitre de manga -> du site 'www.japscan.lol'
 
 Le script exige de préciser :
 - le nom du manga (figurant sur le site www.japscan.lol),
@@ -12,7 +12,7 @@ Le fichier 'Manga_Downloader V2.py' est utilisé pour télécharger un chapitre 
 
 ## Manga Downloader Update
 
-Nouveau script Python qui permet de télécharger : toutes les pages -> d'un chapitre de manga -> du site '[https://scantrad-vf.co/]'
+Nouveau script Python qui permet de télécharger : toutes les pages -> d'un chapitre de manga -> du site 'https://scantrad-vf.co/'
 
 Le script exige de préciser :
 - l'url du manga à télécharger doit être sous la forme 'https://scantrad-vf.co/manga/jujutsu-kaisen/chapitre-1/?style=list'
