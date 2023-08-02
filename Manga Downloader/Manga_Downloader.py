@@ -10,7 +10,6 @@ page = 1 # Page de départ
 chapter = 1 # Chapitre 
 nom_fichier='/Users/charles-albert/Desktop/Manga Downloader/Chap1' # Chemin + Nom du fichier à créer
 lien_chapitre=str(f'https://www.japscan.lol/lecture-en-ligne/jujutsu-kaisen/{chapter}/{page}.html')
-# Scraper les noms de mangas disponibles 
 #======================================================================================================================================================================
 
 # Création du répertoire pour enregistrer les images
