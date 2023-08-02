@@ -26,7 +26,7 @@ Le fichier 'Manga_Downloader V2.py' était utilisé pour télécharger un chapit
 **Nouveau** script Python qui permet de télécharger : toutes les pages -> d'un chapitre de manga -> du site 'https://scantrad-vf.co/'
 
 Le script exige de préciser :
-- l'url du manga à télécharger doit être sous la forme 'https://scantrad-vf.co/manga/.../chapitre-.../?style=list'
+- L'url du manga à télécharger doit être sous la forme 'https://scantrad-vf.co/manga/.../chapitre-.../?style=list'
 - Nom du fichier à créer
 - Nom du dossier à créer contenant les images
   
