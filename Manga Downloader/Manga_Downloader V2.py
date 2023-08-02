@@ -6,11 +6,6 @@ import re
 import pandas as pd
 import yaml
 
-# Barre de recherche
-# Afficher le nombre de chapitres disponibles du manga
-# Selection de chapitres à télécharger séparés par des ',' ( on les insérera dans une liste pour une boucle 'for' )
-# Créer une barre de recherche + liste de chapitres disponibles [ Barre de pourcentage de téléchargement ? ]
-
 #============================================================= Chargement des datas ====================================================================================
 mangas_path = '/Users/charles-albert/Desktop/Manga Downloader/mangas.csv'
 chapters_path = '/Users/charles-albert/Desktop/Manga Downloader/mangas_chapters.yml'
