@@ -1,5 +1,15 @@
 # Manga Downloader Scripts
 
+## Manga Downloader
+
+**Ancien** Script Python qui **permettait** de télécharger : toutes les pages -> d'un chapitre de manga -> du site 'www.japscan.lol'
+
+Le script exige de préciser :
+- le nom du manga (figurant sur le site www.japscan.lol),
+- le chapitre à télécharger
+
+Le fichier 'Manga_Downloader.py' etait utilisé pour télécharger un chapitre du manga 'jujutsu kaisen'.
+
 ## Manga Downloader V2
 
 **Ancien** Script Python qui **permettait** de télécharger : toutes les pages -> d'un chapitre de manga -> du site 'www.japscan.lol'
@@ -8,7 +18,7 @@ Le script exige de préciser :
 - le nom du manga (figurant sur le site www.japscan.lol),
 - le chapitre à télécharger
 
-Le fichier 'Manga_Downloader V2.py' est utilisé pour télécharger un chapitre du manga 'jujutsu kaisen'.
+Le fichier 'Manga_Downloader V2.py' etait utilisé pour télécharger un chapitre du manga 'jujutsu kaisen'.
 
 ## Manga Downloader Update
 
