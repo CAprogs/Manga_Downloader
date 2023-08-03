@@ -21,7 +21,7 @@ if not os.path.exists(nom_fichier):
 chrome_profile_path = '/Users/charles-albert/Library/Application Support/Google/Chrome/Default'
 options = webdriver.ChromeOptions()
 options.add_argument('--user-data-dir=' + chrome_profile_path)
-driver = webdriver.Chrome(options=options,executable_path='/Users/charles-albert/Desktop/chromedriver_mac_arm64/chromedriver') # Chemin vers l'exécutable chromedriver
+driver = webdriver.Chrome(options=options)
 driver.maximize_window() # Ouvrir le navigateur en full size
 # -----------------------------------------------------------
 
