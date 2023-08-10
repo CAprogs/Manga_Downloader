@@ -25,7 +25,7 @@ Le fichier 'Manga_Downloader V2.py' était utilisé pour télécharger un chapit
 
 **Nouveau** script Python qui permet de télécharger : toutes les pages -> d'un chapitre de manga -> du site 'https://scantrad-vf.co/'
 
-Le script exige de préciser :
+Prérequis :
 - L'url du manga à télécharger doit être sous la forme 'https://scantrad-vf.co/manga/.../chapitre-.../?style=list'
 - Nom du fichier à créer
 - Nom du dossier à créer contenant les images
@@ -33,3 +33,13 @@ Le script exige de préciser :
 **'?style=list'** permet d'afficher toutes les pages du manga sur une seule page web.
 
 Le fichier 'Manga_Downloader V3.py' est utilisé pour télécharger toutes les pages du premier chapitre du manga 'jujutsu kaisen'.
+
+## Manga Downloader V4
+
+**Nouveau** script Python qui permet de télécharger : toutes les pages -> d'un chapitre de manga -> du site 'https://lelscans.net/'
+
+Prérequis :
+- Le nom du manga à télécharger
+- Le numéro du chapitre à télécharger
+
+Le fichier 'Manga_Downloader V4.py' est utilisé pour télécharger toutes les pages du chapitre 240 du manga 'beelzebub'.
