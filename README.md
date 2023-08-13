@@ -43,3 +43,14 @@ Prérequis :
 - Le numéro du chapitre à télécharger
 
 Le fichier 'Manga_Downloader V4.py' est utilisé pour télécharger toutes les pages du chapitre 240 du manga 'beelzebub'.
+
+## Manga Downloader V5
+
+**Nouveau** script Python qui permet de télécharger : Tout un chapitre de manga -> du site 'https://fmteam.fr/comics'
+
+Prérequis :
+- Le nom du manga à télécharger
+- Le numéro du chapitre à télécharger
+- Le chemin où stocker les téléchargements
+
+Le fichier 'Manga_Downloader V5.py' est utilisé pour télécharger le chapitre 1424 du manga 'hajime-no-ippo'.
