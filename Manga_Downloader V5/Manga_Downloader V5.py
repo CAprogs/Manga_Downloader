@@ -3,7 +3,10 @@ import zipfile
 import io
 import os
 
-url = "https://fmteam.fr/api/download/hajime-no-ippo/fr/ch/1429" # "https://fmteam.fr/api/download/{manga_name}/fr/ch/{chapter_number}" ( Pattern de téléchargement )
+# "https://fmteam.fr/api/download/{manga_name}/fr/ch/{chapter_number}" ( Pattern de téléchargement si chapter_number = int)
+# "https://fmteam.fr/api/download/{manga_name}/fr/ch/{chapter_number_1}/sub/{chapter_number_2}" ( Pattern de téléchargement si chapter_number = float)
+
+url = "https://fmteam.fr/api/download/hajime-no-ippo/fr/ch/1429" 
 response = requests.get(url)
 
 if response.status_code == 200:
@@ -14,7 +17,7 @@ if response.status_code == 200:
     new_folder_name = "hajime-no-ippo"
 
     # Créez le répertoire de destination avec le nouveau nom
-    extract_path = os.path.join("/Users/charles-albert/Desktop/PandaScan", new_folder_name)  # crée un dossier contennat les dossiers téléchargés
+    extract_path = os.path.join("/Users/charles-albert/Desktop/PandaScan", new_folder_name)  # crée un dossier contenant les dossiers téléchargés
     os.makedirs(extract_path, exist_ok=True)
 
     # Créez un objet zipfile.ZipFile à partir du flux binaire
